@@ -12,7 +12,7 @@
 
 # Создание каталога source и первый коммит
 ```
-> echo "# TIMO's RK_2" > README.md
+> echo "# TIMP's RK_2" > README.md
 
 > mkdir source
 
@@ -160,10 +160,62 @@ Total 42 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (7/7), completed with 1 local object.
 To https://github.com/Trener-Egor/RK_2.git
    3a1bd1c..e630f8d  main -> main
+```
 
-# Работа с travis ci
+# GitHub Actions
+```
+> mkdir -p .github/workflows
+> touch .github/workflows/build.yml
+> nvim .github/workflows/build.yml
+name: TIMP RK_2 workflow
 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install GCC
+        run: sudo apt-get update && sudo apt-get install -y g++
+
+      - name: Create build directory
+        run: mkdir build_action && cd build_action
+
+      - name: Configure CMake
+        run: cmake ..
+
+      - name: Build
+        run: make
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rk_2_executable
+          path: build_action/rk_2
+
+
+
+````
+
+# GTest
+```
 
 
 
 ```
+
+# CPack
+```
+
+
+
+```
+
+
