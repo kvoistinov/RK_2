@@ -1,1 +1,0 @@
-g++ CMakeFiles/rk_2.dir/source/pattern_memento.cpp.o -o rk_2
