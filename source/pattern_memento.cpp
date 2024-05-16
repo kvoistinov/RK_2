@@ -45,6 +45,8 @@ class Caretaker {
 }  // namespace jc
 
 int main() {
+  std::cout << "TIMP's RK_2\n";
+
   jc::Caretaker caretaker;
   jc::Originator originator(1);
   caretaker.SetState("one", originator.ValueMemento());
