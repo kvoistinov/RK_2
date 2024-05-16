@@ -17,10 +17,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y g++
 
       - name: Create build directory
-        run: mkdir build && cd build
+        run: mkdir build
 
       - name: Configure CMake
-        run: cmake ..
+        run: cmake -H. -Bbuild
 
       - name: Build
         run: make
