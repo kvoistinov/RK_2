@@ -66,15 +66,34 @@ cmake_minimum_required(VERSION 3.10)
 project(rk_2)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_COMPILER g++) 
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_COMPILER g++)
 
-include_directories(./source/)
+# Указываем папку с исходными файлами
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/source)
 
-add_executable(rk_2 pattern_memento.cpp)
+# Указываем исходный файл
+add_executable(rk_2 ${CMAKE_CURRENT_SOURCE_DIR}/source/pattern_memento.cpp) 
 
 EOF
 
-> 
+> git commit -m "Add CMakeLists.txt"
+[main 3a1bd1c] Add CMakeLists.txt
+ 2 files changed, 31 insertions(+)
+ create mode 100644 CMakeLists.txt
 
+> git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 774 bytes | 774.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Trener-Egor/RK_2.git
+   dbd921e..3a1bd1c  main -> main
+
+// Создадим сборку
+> mkdir build
 
 ```
