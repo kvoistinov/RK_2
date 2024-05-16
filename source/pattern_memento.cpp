@@ -44,16 +44,21 @@ class Caretaker {
 
 }  // namespace jc
 
-int main() {
+int main() 
+{
   std::cout << "TIMP's RK_2\n";
 
   jc::Caretaker caretaker;
+  
   jc::Originator originator(1);
   caretaker.SetState("one", originator.ValueMemento());
+  
   originator.SetValue(2);
   caretaker.SetState("two", originator.ValueMemento());
+  
   originator.SetValue(3);
   caretaker.SetState("three", originator.ValueMemento());
+
 
   originator.Load(caretaker.State("two"));
   originator.PrintValue();  // 2
