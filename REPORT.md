@@ -95,5 +95,75 @@ To https://github.com/Trener-Egor/RK_2.git
 
 // Создадим сборку
 > mkdir build
+> cmake -H. -Bbuild
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ USER_NAME/PATH .../build
+
+!!! EDIT
+
+> cmake --build _build
+[ 50%] Building CXX object CMakeFiles/rk_2.dir/source/pattern_memento.cpp.o
+[100%] Linking CXX executable rk_2
+[100%] Built target rk_2
+
+> cd build
+> ./rk_2
+2
+1
+3
+
+> cd ..
+> git add .
+git commit -m "Build project"
+[main e630f8d] Build project
+ 33 files changed, 3623 insertions(+), 7 deletions(-)
+ create mode 100644 build/CMakeCache.txt
+ create mode 100644 build/CMakeFiles/3.29.0/CMakeCCompiler.cmake
+ create mode 100644 build/CMakeFiles/3.29.0/CMakeCXXCompiler.cmake
+ create mode 100755 build/CMakeFiles/3.29.0/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 build/CMakeFiles/3.29.0/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 build/CMakeFiles/3.29.0/CMakeSystem.cmake
+ create mode 100644 build/CMakeFiles/3.29.0/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 build/CMakeFiles/3.29.0/CompilerIdC/a.out
+ create mode 100644 build/CMakeFiles/3.29.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 build/CMakeFiles/3.29.0/CompilerIdCXX/a.out
+ create mode 100644 build/CMakeFiles/CMakeConfigureLog.yaml
+ create mode 100644 build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 build/CMakeFiles/Makefile.cmake
+ create mode 100644 build/CMakeFiles/Makefile2
+ create mode 100644 build/CMakeFiles/TargetDirectories.txt
+ create mode 100644 build/CMakeFiles/cmake.check_cache
+ create mode 100644 build/CMakeFiles/progress.marks
+ create mode 100644 build/CMakeFiles/rk_2.dir/DependInfo.cmake
+ create mode 100644 build/CMakeFiles/rk_2.dir/build.make
+ create mode 100644 build/CMakeFiles/rk_2.dir/cmake_clean.cmake
+ create mode 100644 build/CMakeFiles/rk_2.dir/compiler_depend.make
+ create mode 100644 build/CMakeFiles/rk_2.dir/compiler_depend.ts
+ create mode 100644 build/CMakeFiles/rk_2.dir/depend.make
+ create mode 100644 build/CMakeFiles/rk_2.dir/flags.make
+ create mode 100644 build/CMakeFiles/rk_2.dir/link.txt
+ create mode 100644 build/CMakeFiles/rk_2.dir/progress.make
+ create mode 100644 build/CMakeFiles/rk_2.dir/source/pattern_memento.cpp.o
+ create mode 100644 build/CMakeFiles/rk_2.dir/source/pattern_memento.cpp.o.d
+ create mode 100644 build/Makefile
+ create mode 100644 build/cmake_install.cmake
+ create mode 100755 build/rk_2
+
+> git push origin main
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (42/42), 69.61 KiB | 5.80 MiB/s, done.
+Total 42 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+To https://github.com/Trener-Egor/RK_2.git
+   3a1bd1c..e630f8d  main -> main
+
+# Работа с travis ci
+
+
+
 
 ```
