@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y g++
 
       - name: Create build directory
-        run: mkdir build_action && cd build_action
+        run: mkdir build && cd build
 
       - name: Configure CMake
         run: cmake ..
@@ -29,5 +29,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: rk_2_executable
-          path: build_action/rk_2
-
+          path: build/rk_2

@@ -186,7 +186,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y g++
 
       - name: Create build directory
-        run: mkdir build_action && cd build_action
+        run: mkdir build && cd build
 
       - name: Configure CMake
         run: cmake ..
@@ -198,7 +198,20 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: rk_2_executable
-          path: build_action/rk_2
+          path: build/rk_2
+
+> git add . &&  git commit -m "Add GitHub Actions"
+> git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 380 bytes | 380.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Trener_Egor/RK_2.git
+   cda561e..c91759e  main -> main
+
 
 
 
