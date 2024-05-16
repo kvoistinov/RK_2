@@ -215,7 +215,7 @@ To https://github.com/Trener_Egor/RK_2.git
 // Check GitHub Actions
     gh run list --workflow="TIMP RK_2 workflow" --repo="ВАШ_GITHUB_НИК/ВАШ_РЕПОЗИТОРИЙ"
     
-
+> gh run view ID
 
 
 ````

@@ -24,6 +24,9 @@ jobs:
       
       - name: Build project 
         run: cmake --build build 
+      
+      - name: Run project
+        run: cd build && ./rk_2
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
